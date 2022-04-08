@@ -1,4 +1,5 @@
 import subprocess
+from colorama import Fore, init
 
-print("[+] Espere mientras se compila su archivo...")
+print(f"{Fore.RED}[{Fore.LIGHTRED_EX}+{Fore.RED}]{Fore.RESET} Espere mientras se compila su archivo...")
 subprocess.call("pyinstaller --onefile main.py --icon=./icon.ico", shell=True)

@@ -85,7 +85,6 @@ def main():
             main()
     
     for key in f.readlines():
-        time.sleep(0.2)
         key = str(key)
         if key[-1::] == "\n":
             key = key[:-1:]
@@ -128,10 +127,10 @@ def main():
         else:
             if str(key) in valid:
                 pg.press(key)
-                time.sleep((len(key)/100)/2)
+                time.sleep(0.01)
                 continue
             else:
-                pg.write(key,(len(key)/100)/2)
+                pg.write(key,0.01)
                 continue
 
 if __name__ == "__main__":
