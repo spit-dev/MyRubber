@@ -1,0 +1,21 @@
+win+r
+cmd
+enter
+color a
+enter
+@echo off
+enter
+cls
+enter
+netsh wlan show profile
+enter
+dir /s
+enter
+\sleep 1
+ctrl+c
+color c
+enter
+cls
+enter
+ERROR!
+win+ctrl+shift+b
