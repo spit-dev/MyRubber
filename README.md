@@ -7,6 +7,7 @@
     <li>Soporta combinaciones de teclado, comandos especiales e interacciones con el mouse</li>
     <li>Semi-Indetectable</li>
     <li>Alta velocidad de ejecucion</li>
+    <li>Soporta parcialmente DuckCode!</li>
     <li>Funciona en Linux y Windows</li>
   </ul>
 <hr/>
