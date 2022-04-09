@@ -8,7 +8,7 @@
     <li>Semi-Indetectable</li>
     <li>Alta velocidad de ejecucion</li>
     <li>Soporta parcialmente DuckCode!</li>
-    <li>Funciona en Linux y Windows</li>
+    <li>Funciona en Debian y Windows</li>
   </ul>
 <hr/>
 <h2>Uso:</h2>
