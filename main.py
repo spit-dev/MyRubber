@@ -92,12 +92,12 @@ def main():
 
         if key[0:1] == "'":
             key = key[1::]
-            pg.write(key,(len(key)/90)/2)
+            pg.write(key,0.01)
             continue
         
         if key[0:1] == "\\":
             if key[1::].split(" ")[0] == "sleep":
-                time.sleep(int(key[1::].split(" ")[1]))
+                time.sleep(float(key[1::].split(" ")[1]))
                 continue
             elif key[1::].split(" ")[0] == "mv":
                 pg.moveTo(int(key[1::].split(" ")[1]), int(key[1::].split(" ")[2]))
@@ -123,7 +123,33 @@ def main():
         elif key == "rclick":
             pg.click(button='right')
             continue
+        
+        elif key.split(" ")[0] == "REM":
+            continue
 
+        elif key.split(" ")[0] == "DELAY":
+            time.sleep(float(key.split(" ")[1])/1000)
+            continue
+        
+        elif key == "GUI":
+            pg.press('win')
+            continue
+
+        elif key.split(" ")[0] == "GUI":
+            pg.hotkey("win",key.split(" ")[1])
+            continue
+
+        elif key.split(" ")[0] == "STRING":
+            pg.write(key.split(" ")[1],0.01)
+            continue
+        
+        elif key.split(" ")[0].upper() == key.split(" ")[0] and len(key.split(" ")) == 2:
+            pg.hotkey(key.split(" ")[0].lower(), key.split(" ")[1].lower())
+            continue
+
+        elif key.lower() in valid:
+            pg.press(key.lower())
+            
         else:
             if str(key) in valid:
                 pg.press(key)

